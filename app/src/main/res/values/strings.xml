@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Prato</string>
+    <string name="foto">Foto do Prato</string>
+    <string name="fotografar">Fotografar</string>
+    <string name="descricao">Sobre o Prato</string>
+    <string name="confirmar">Confirmar</string>
+</resources>
