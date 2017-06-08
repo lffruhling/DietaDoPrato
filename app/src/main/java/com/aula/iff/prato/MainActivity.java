@@ -6,6 +6,9 @@ import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnCamera    = (Button) findViewById(R.id.btFotografar);
         Button btnConfirmar = (Button) findViewById(R.id.btConfirmar);
-        Button btnGaleria   = (Button) findViewById(R.id.btGaleria);
+//        Button btnGaleria   = (Button) findViewById(R.id.btGaleria);
 
         imgView = (ImageView) findViewById(R.id.imagem);
         descricao = (EditText) findViewById(R.id.descricao);
@@ -50,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnGaleria.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, GaleriaActivity.class);
-                startActivity(intent);
-            }
-        });
+//        btnGaleria.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, GaleriaActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override
@@ -69,5 +72,25 @@ public class MainActivity extends AppCompatActivity {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, bos);
         foto = bos.toByteArray();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.itVisualizar){
+            Intent intent = new Intent(MainActivity.this, GaleriaActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return false;
     }
 }

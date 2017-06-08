@@ -11,60 +11,72 @@
     tools:context="com.aula.iff.prato.MainActivity"
     android:orientation="vertical">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/foto"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:paddingBottom="4dp"/>
+        >
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="180dp"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/imagem"
-        android:src="@drawable/borda"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/foto"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:paddingBottom="4dp"/>
 
-    <Button
-        android:id="@+id/btFotografar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fotografar"
-        style="@style/Widget.AppCompat.Button.Colored"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/imagem"
+                android:src="@drawable/borda"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/descricao"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+            <Button
+                android:id="@+id/btFotografar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fotografar"
+                style="@style/Widget.AppCompat.Button.Colored"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/descricao"
-        android:inputType="textMultiLine"
-        android:lines="3"
-        android:gravity="top"
-        android:hint="@string/hint_descricao"
-        android:padding="8dp"
-        android:background="@drawable/cpo_borda"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descricao"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btConfirmar"
-        android:text="@string/confirmar"
-        style="@style/Widget.AppCompat.Button.Colored"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descricao"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="top"
+                android:hint="@string/hint_descricao"
+                android:padding="8dp"
+                android:background="@drawable/cpo_borda"/>
 
-    <Button
-        android:id="@+id/btGaleria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Galeria"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btConfirmar"
+                android:text="@string/confirmar"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <!--<Button-->
+                <!--android:id="@+id/btGaleria"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Galeria"/>-->
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
