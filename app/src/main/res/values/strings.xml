@@ -3,5 +3,6 @@
     <string name="foto">Foto do Prato</string>
     <string name="fotografar">Fotografar</string>
     <string name="descricao">Sobre o Prato</string>
-    <string name="confirmar">Confirmar</string>
+    <string name="confirmar">Salvar</string>
+    <string name="hint_descricao">Descrição</string>
 </resources>
