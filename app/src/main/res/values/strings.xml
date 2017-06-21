@@ -5,4 +5,5 @@
     <string name="descricao">Sobre o Prato</string>
     <string name="confirmar">Salvar</string>
     <string name="hint_descricao">Descrição</string>
+    <string name="galeria_de_pratos">Galeria de Pratos</string>
 </resources>

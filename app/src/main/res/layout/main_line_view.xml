@@ -12,8 +12,9 @@
         android:layout_height="match_parent"
         android:clickable="true"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="2dp"
-        app:cardElevation="4dp">
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,28 +23,28 @@
             android:padding="2dp"
             android:layout_marginBottom="10dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:gravity="center"
-                android:textSize="28sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/txt_descricao"
-                tools:text="Line 1"/>
-
+                android:layout_height="180dp"
+                android:id="@+id/img_foto"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
                 android:background="@color/grey"/>
 
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:id="@+id/img_foto"/>
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/txt_descricao"
+                tools:text="Line 1"/>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
